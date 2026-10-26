@@ -1,90 +1,60 @@
-# First Principles 🧠⚡
+# First Principles 🧱✨
 
-> **"If you can't trace the state with a pen and paper, you don't control the code—the code controls you."**
+> **"Complex problems are just simple problems glued together."**
 
-Welcome to **First Principles**. This repository was built for developers who want to move past passive tutorial completion and master the true mechanics of programming.
+Welcome to **First Principles**. This workspace is designed for one purpose: to help you build unshakeable confidence in Python by breaking big, intimidating assessment problems down into tiny, friendly **LEGO bricks**.
 
----
-
-## 💡 The Core Problem: The "Dictation" Trap
-
-Most beginner courses (like interactive step-by-step tracks) teach syntax by dictation:
-> *"Declare variable `x = []` on line 2."*  
-> *"Now write a `for` loop over `items`."*  
-> *"Now append to `x`."*
-
-You get a green checkmark, but when you are dropped in front of a blank file with strict constraints (*"No `range()`, no `sum()`, no `[::-1]`, while-loop only"*), your brain freezes.
-
-That freeze is **not a lack of intelligence**. It is a **gap in mental models**. You were taught *what* functions exist in Python, but not *how to think in state changes and algorithms*.
-
-**First Principles** bridges that gap.
+If you have ever frozen on a Monday challenge, stared at a blank screen, or felt like everyone else understands something you don't: **this space is for you.**
 
 ---
 
-## 🏛️ The 5 Universal Loop Archetypes
+## 💡 The First Principles Method
 
-Every loop problem you will ever see in your career—from a simple test to a LeetCode Hard—is built from just **5 universal patterns**:
+In the fellowship, mentors give you questions with scary constraints:
+* *"Do not use `sum()` or `min()` or `max()`"*
+* *"Do not use `[::-1]` or `.reverse()`"*
+* *"Do not convert the number to a string"*
+* *"Do not use `sort()` or `set()`"*
 
-| # | Archetype | The Mental Picture | Fellowship / Interview Example |
+When you see all those rules at once, your brain panics. But here is the secret:
+**The mentor is not asking you to be a genius. They are asking you to snap 3 simple building blocks together.**
+
+In this repo, you will never face a giant mountain. Instead:
+1. **You build Brick 1** (2–3 lines of code). You run the test. It passes. ✅
+2. **You build Brick 2** (2–3 lines of code). You run the test. It passes. ✅
+3. **You build Brick 3** (2–3 lines of code). You run the test. It passes. ✅
+4. **The Assembly**: You take Brick 1, 2, and 3, put them in one file, and suddenly... **you just solved the mentor's Monday assessment question.**
+
+---
+
+## 🗺️ The Learning Tracks
+
+| Track | Theme | What You Build Step-by-Step | The Fellowship Challenge You Conquer |
 | :--- | :--- | :--- | :--- |
-| **1** | **The Accumulator** *(The Snowball)* | Start with empty state (`0`, `""`, `[]`), visit items, add/modify, return result. | Summing numbers without `sum()`, reversing strings without `[::-1]`. |
-| **2** | **The Guardian / Filter** *(The Bouncer)* | Inspect each item. Let matching items pass, or exit early with `break`. | Prime testing (stop at $\sqrt{N}$), finding target elements. |
-| **3** | **The Reducer** *(The Shredder)* | Start with a number or string. Repeatedly divide, chop, or shrink it until zero. | Decimal to Binary conversion, number-to-digits. |
-| **4** | **The State Machine** *(The Relay)* | Remember what happened on the *previous* step to decide what to do on the *current* step. | Fibonacci numbers, Roman numerals look-ahead, capitalize after space. |
-| **5** | **The Frequency Bucket** *(The Sorter)* | Tally occurrences of items manually without libraries. | Anagram checks, character counts. |
-
-When you see a problem, you don't panic. You ask: **"Which of the 5 archetypes is this?"**
+| **[`01-numbers-and-lists`](./01-numbers-and-lists)** | Lists & Numbers | Visiting items → Accumulators → Finding max/min → Combining | **Question 1: The List Analyser** |
+| **[`02-searching-and-filtering`](./02-searching-and-filtering)** | Search & Logic | Target equality → Manual index tracking → Early exit | **Question 2: Linear Search** |
+| **[`03-string-mechanics`](./03-string-mechanics)** | Strings & Pointers | Character walks → Prepending → Letter checks → Two pointers | **Question 2: Two-Pointer Palindrome** |
+| **[`04-math-state-and-reducers`](./04-math-state-and-reducers)** | Pure Math | Last digits (`% 10`) → Division (`// 10`) → Reversing numbers | **Question 9: Math Number Reverser & Binary** |
+| **[`05-dictionaries-and-frequencies`](./05-dictionaries-and-frequencies)** | Dictionaries | Key lookups → Tally counters → Finding the highest count | **Question 5 & 7: Word Frequency & Anagrams** |
+| **[`06-grids-and-nested-loops`](./06-grids-and-nested-loops)** | 2D Grids | Outer row loops → Inner cell loops → Matrix totals | **Question 3: Matrix Row & Column Sums** |
 
 ---
 
-## 🪜 The 3-Tier Training Ladder
+## 🏃 How to Practice
 
-Every topic is broken down into three stages so you never hit a wall:
+Every step has 3 files:
+- **`README.md`**: Explains the single concept in plain English. No jargon.
+- **`exercise.py`**: Your workspace. Write your code here.
+- **`test_exercise.py`**: A friendly test that checks your code.
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  Tier 3: The Challenge (The Boss Fight)                          │
-│          Assemble Tier 1 & Tier 2 into the full multi-part task. │
-├──────────────────────────────────────────────────────────────────┤
-│  Tier 2: The Constraint Squeeze (Muscle Memory)                  │
-│          Enforce strict rules (no range, no sum, no [::-1]).     │
-├──────────────────────────────────────────────────────────────────┤
-│  Tier 1: Read & Trace (The Atomic Mechanism)                     │
-│          Fill in a trace table. Step through lines 1-by-1.       │
-└──────────────────────────────────────────────────────────────────┘
+To test your code on any single step:
+```bash
+python test_exercise.py
 ```
 
----
+To see your overall progress across all tracks at any time:
+```bash
+python run_all_tests.py
+```
 
-## 🗺️ Curriculum Roadmap
-
-### `01-mental-models/`
-- **`the-5-loop-archetypes.md`**: Deep dive with code templates for every pattern.
-- **`how-to-trace-code.md`**: How to use a paper trace table to visualize execution before writing a single line.
-
-### `02-foundations-drills/`
-Targeted muscle-memory exercises directly reinforcing loops and sequences:
-- **`01-accumulators`**: Manual sums, products, and custom string joiners.
-- **`02-reducers`**: `while` loops, number reduction, remainder tracking.
-- **`03-bouncers-and-primes`**: Divisor checking, flag variables, early exits.
-- **`04-two-pointers-and-swaps`**: In-place reversals, palindrome checks without slicing.
-- **`05-frequency-maps`**: Building manual tally dictionaries.
-
-### `03-fellowship-bridge/`
-Step-by-step deconstruction of the Fellowship Monday Challenges:
-- **`set-04-revision-and-progression`**:
-  - `01-optimized-primes`: Primes up to $N$ with $\sqrt{N}$ while-loop optimization.
-  - `02-fibonacci-even-sum`: Fibonacci sequence, even sum, reverse printing without lists or `[::-1]`.
-  - `03-decimal-to-binary`: Pure remainder division and manual string assembly.
-  - `04-matrix-multiplication`: 3-tier nested loop matrix algebra.
-  - `05-ascii-capitalize`: First-letter word capitalization with `ord()` and `chr()` arithmetic.
-  - `06-anagram-checker`: Character frequency hashing without `set` or `sort`.
-  - `07-roman-to-integer`: Look-ahead dictionary parsing.
-  - `08-matrix-rotation`: In-place 90° clockwise matrix rotation (Transpose + Row Reversal).
-
----
-
-## ⚡ Golden Rules of First Principles
-1. **Trace First**: If you are stuck, write a 3-row trace table with a pen. Don't guess in the code editor.
-2. **One Variable at a Time**: Never write a nested loop until the outer loop is printing exactly what you expect.
-3. **No Magic Allowed**: If a challenge bans a built-in function (`range`, `sum`, `[::-1]`), celebrate it! That constraint is the gym weights that build real engineering muscle.
+When all tests pass, that brick is permanently solid in your mental toolkit. Move on to the next brick and snap them together!
